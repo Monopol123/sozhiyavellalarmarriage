@@ -1,0 +1,76 @@
+@import './variable.scss';
+
+footer {
+    background: $light-pink;
+    color: $heading-text-color;
+
+    h2{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .links {
+        @media (max-width:767px) { 
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            a {
+                color: $gray-800;
+                transition: color .2s;
+                text-decoration: none;
+                font-size: 13px;
+    
+                &:hover {
+                    color: $dark-bright-pink;
+                }
+            }
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+
+    .about-company {
+        i {
+            font-size: 25px;
+        }
+
+        a {
+            color: $gray-800;
+            transition: color .2s;
+            font-size: 13px;
+
+            &:hover {
+                color: #4180CB
+            }
+        }
+        p{
+            font-size: 12px;
+            line-height: 1.7;
+        }
+    }
+
+    .location {
+        i {
+            font-size: 18px;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+
+    .copyright {
+        margin-top: 2rem;
+        p {
+            padding-top: 1rem;
+            border-top: 1px solid  rgba($med-light-pink, .7) ;
+            font-size: 13px;
+        }
+    }
+}

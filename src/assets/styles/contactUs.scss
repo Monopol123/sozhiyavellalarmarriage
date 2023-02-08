@@ -1,0 +1,48 @@
+@import './variable.scss';
+
+.contacts_UI{
+    .contacts_UIBody{
+        padding: 5em 0;
+        @media (max-width:767px) {
+            padding: 2em 15px 0;       
+        }
+        .contactDetailTxt{
+            @media (max-width:767px) {
+                padding-top: 1rem;
+            }
+            p{
+                font-size: 14px;
+                color: $heading-text-color;
+                line-height: 1.7;
+                margin-bottom: 2rem;
+                @media (max-width:767px) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .contactPersonalDetail{
+            h6{
+                font-size: 16px;
+                font-weight: 600;
+                color: $bright-pink;
+                display: flex;
+                align-items: end;
+
+                svg{
+                    height: 24px;
+                    font-size: 24px;
+                    margin-right: 5px;
+                }
+            }
+            p{
+                font-size: 14px;
+                color: $heading-text-color;
+                line-height: 1.7;
+                margin-bottom: 2rem;
+                @media (max-width:767px) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

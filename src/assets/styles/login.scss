@@ -1,0 +1,496 @@
+@import './variable.scss';
+
+.half {
+	height: 100vh;
+
+	@media (max-width:767px) {
+		// background: $gray-pink;
+	}
+
+	.contents {
+		background: #f6f7fc;
+		width: 50%;
+		flex: 1;
+
+		@media (max-width:767px) {
+			background: transparent;
+			z-index: 1;
+			position: relative;
+		}
+
+		.loginRowBox {
+			height: 100vh;
+
+			.logoImg {
+				width: 100%;
+				height: 60px;
+				margin: 0 auto 2rem;
+				text-align: center;
+				object-fit: contain;
+			}
+
+			form {
+				width: 320px;
+				margin: auto;
+
+				.form-control,
+				.form-select {
+					box-shadow: none;
+					min-height: 50px;
+					background: transparent;
+					border-radius: 0;
+					font-size: 14px;
+					color: $dark-blue;
+					border: 1px solid #D06550;
+
+					&:active {
+						outline: none;
+						-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+						box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+					}
+
+					&:focus {
+						outline: none;
+						-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+						box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+					}
+
+					&::placeholder {
+						font-size: 14px;
+					}
+					&.horoscope_file{
+						min-height: auto;
+					}
+				}
+
+				.form-check {
+					font-size: 14px;
+				}
+
+				.forgetPswd {
+					text-decoration: none;
+					color: $heading-text-color;
+					font-size: 14px;
+
+					&:hover {
+						color: $dark-bright-pink;
+					}
+				}
+
+				.btn {
+					height: auto;
+					padding: 11px 40px;
+					border: 2px solid #fff;
+					color: #fff;
+					font-size: 16px;
+					border-radius: 0;
+					border-color: #DEB48E;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					@include btnColor;
+					@include btnShadow;
+					box-shadow: none;
+					width: 100%;
+
+					&.backBtn {
+						background: $gray-700;
+						border-color: $gray-800;
+					}
+				}
+
+				.form-check-input:checked {
+					background-color: $dark-bright-pink;
+					border-color: $dark-bright-pink;
+
+					&:focus {
+						box-shadow: 0 0 0 0.25rem rgb(187 73 50 / 25%);
+					}
+				}
+
+				.form-label {
+					margin-bottom: 0.3rem;
+					font-size: 14px;
+				}
+			}
+
+			.signUpTxt {
+				margin: 1rem auto 0;
+				font-size: 14px;
+				text-align: center;
+				font-weight: 500;
+
+				a {
+					text-decoration: none;
+					color: $dark-bright-pink;
+					font-size: 14px;
+
+					&:hover {
+						color: $bright-pink;
+					}
+				}
+			}
+		}
+	}
+
+	.login-bg {
+		width: 45%;
+		background: url(../images/login-img-1.jpg) no-repeat center;
+		background-size: cover;
+		background-position: center;
+
+		@media (max-width:767px) {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: .1;
+			height: 100vh;
+			width: 100%;
+		}
+
+		.form-control {
+			border: none;
+			-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+			height: 54px;
+			background: #fff;
+
+			&:active {
+				outline: none;
+				-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+				box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+			}
+
+			&:focus {
+				outline: none;
+				-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+				box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+
+	a {
+		color: #888;
+		text-decoration: underline;
+	}
+
+	.btn {
+		height: 54px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.forgot-pass {
+		position: relative;
+		top: 2px;
+		font-size: 14px;
+	}
+
+	&.signUpUI {
+		.login-bg {
+			width: 35%;
+			background: url(https://w0.peakpx.com/wallpaper/31/199/HD-wallpaper-togetherness-bride-groom-indian-wedding-serene-white.jpg) no-repeat center;
+			background-size: cover;
+			background-position: center;
+
+			@media (max-width:767px) {
+				width: 100%;
+			}
+		}
+
+		.contents {
+			.loginRowBox {
+				padding: 70px 0;
+				overflow: auto;
+
+				form {
+					width: auto;
+
+					.submitBtnBox {
+						.form-label {
+							opacity: 0;
+
+							@media (max-width:767px) {
+								display: none;
+							}
+						}
+					}
+
+					.inlineFromGrup {
+						display: flex;
+						flex-wrap: nowrap;
+						justify-content: space-between;
+
+						select,
+						.form-control {
+							width: 30%;
+						}
+
+						.form-check {
+							margin-right: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.control {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 14px;
+
+	.caption {
+		position: relative;
+		top: .2rem;
+		color: #888;
+	}
+
+	input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+
+		&:focus~.control__indicator {
+			background: #ccc;
+		}
+
+		&:checked~.control__indicator {
+			background: #fb771a;
+
+			&:after {
+				display: block;
+				color: #fff;
+			}
+		}
+
+		&:checked {
+			&:focus~.control__indicator {
+				background: #fb8633;
+			}
+		}
+
+		&:disabled~.control__indicator {
+			background: #e6e6e6;
+			opacity: 0.9;
+			pointer-events: none;
+		}
+	}
+
+	&:hover {
+		input~.control__indicator {
+			background: #ccc;
+		}
+
+		input {
+			&:not([disabled]) {
+				&:checked~.control__indicator {
+					background: #fb8633;
+				}
+			}
+		}
+	}
+}
+
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background: #e6e6e6;
+	border-radius: 4px;
+
+	&:after {
+		font-family: 'icomoon';
+		content: '\e5ca';
+		position: absolute;
+		display: none;
+		font-size: 16px;
+		-webkit-transition: .3s all ease;
+		-o-transition: .3s all ease;
+		transition: .3s all ease;
+	}
+}
+
+.control--radio {
+	.control__indicator {
+		border-radius: 50%;
+	}
+}
+
+.control--checkbox {
+	.control__indicator {
+		&:after {
+			top: 50%;
+			left: 50%;
+			margin-top: -1px;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	input {
+		&:disabled~.control__indicator {
+			&:after {
+				border-color: #7b7b7b;
+			}
+		}
+
+		&:disabled {
+			&:checked~.control__indicator {
+				background-color: #7e0cf5;
+				opacity: .2;
+			}
+		}
+	}
+}
+
+@media (max-width: 991.98px) {
+	.half {
+		.bg {
+			height: 200px;
+		}
+	}
+}
+
+@media (max-width: 1199.98px) {
+	.half {
+		.contents {
+			width: 100%;
+		}
+
+		.bg {
+			width: 100%;
+		}
+	}
+}
+
+.wizardApp {
+	.steps {
+		.nav {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+			margin: 3rem 2rem;
+
+			li {
+				&::before {
+					content: " ";
+					background-color: rgb(155, 155, 155);
+					border: 10px solid #fff;
+					border-radius: 50%;
+					display: block;
+					width: 30px;
+					height: 30px;
+					margin: 9px auto;
+					box-shadow: 1px 1px 3px #606060;
+					transition: all;
+					z-index: 1;
+					position: relative;
+				}
+
+				&.active {
+					&::before {
+						// font-family: "Font Awesome 5 free";
+						content: "";
+						font-size: 11px;
+						font-weight: 600;
+						color: #fff;
+						padding: 6px;
+						background: $bright-green url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm0 0" fill="#2196f3" data-original="#2196f3" class=""></path><path d="m385.75 201.75-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0 8.339844 8.339843 8.339844 21.820312 0 30.164062zm0 0" fill="#fafafa" data-original="#fafafa"></path></g></svg>');
+
+						border: 1px solid $bright-green;
+						box-shadow: 0 0 0 7.5px rgba($bright-green , 0.2);
+					}
+				}
+
+				&:nth-child(2) {
+					&::after {
+						content: "";
+						background-color: rgb(155, 155, 155);
+						padding: 0px 0px;
+						position: absolute;
+						top: 14px;
+						left: 12px;
+						width: calc(100% - 20px);
+						height: 2px;
+						margin: 9px auto;
+						transition: all 0.8s;
+					}
+				}
+
+			}
+		}
+
+		position: relative;
+	}
+
+	.step-component {
+		.tabTitleTxt {
+			margin: 30px 0 20px;
+			border-bottom: 2px dashed rgba($bright-pink, 0.6);
+			padding-bottom: 5px;
+		}
+
+		.signUpInnerBox {
+			padding-left: 30px;
+		}
+	}
+
+	.submitBtnBox {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 35px;
+
+		.btn {
+			max-width: 180px;
+			opacity: 1;
+
+			&:disabled {
+				display: none;
+			}
+
+			&.nextBtn {
+				margin-left: auto;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.translated-ltr {
+	.wizardApp {
+		.submitBtnBox {
+			.btn {
+				padding: 11px !important;
+			}
+			.backBtn{
+				// min-width: 100px;
+			}
+		}
+	}
+
+	.loginRowBox{
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar {
+			width: 5px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #000000;
+			border: 2px solid #555555;
+		}
+	}
+}
